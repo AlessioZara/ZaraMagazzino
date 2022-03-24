@@ -36,7 +36,7 @@ apiServer.get("/api/result", (req , res) => {
 
 apiServer.get("/api/Tab1", (req , res) => {
     connection.query(
-        "INSERT INTO result (id, nome, quantitativo) VALUES (?,?,?);",
+        "INSERT INTO Tab1 (id, nome, quantitativo) VALUES (?,?,?);",
         [req.query.id, req.query.nome, req.query.quantitativo],
         function(err, results, fields) {
             console.log(err);
