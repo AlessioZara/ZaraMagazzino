@@ -5,11 +5,11 @@
     <body>  
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <div class=".container-fluid">
-            <h1>LOGIN IN IN</h1>
+            <h1>INSERISCI</h1>
             <label for="floatingInput">inserire id:</label>    
             <input type="text" id="id" placeholder="id" />
             <label for="floatingInput">inserire nome:</label>
-            <input type="nome" id="nome" placeholder="nome" />
+            <input type="text" id="nome" placeholder="nome" />
             <label for="floatingInput">inserire quantitativo:</label>
             <input type="number" id="quantitativo" placeholder="quantitativo" />
             <button id="button1" class="btn btn-dark">invia</button>
@@ -20,13 +20,13 @@
                 let id = $("#id").val();
                 let nome = $("#nome").val();
                 let quantitativo = $("#quantitativo").val();
-                if (mail && psw) {
+                if (id && nome && quantitativo) {
                     console.log($("#id").val());
                     console.log($("#nome").val());
                     console.log($("#quantitativo").val());
                     $.ajax(
                         {
-                            url: ("http://localhost:5000/api/LoginBackFront?id="+id+"&nome="+nome+"&quantitativo="+quantitativo),
+                            url: ("http://localhost:5000/api/Tab1?id="+id+"&nome="+nome+"&quantitativo="+quantitativo),
                             method: "GET",
                             success: function(data){
                                 console.log("success: ",data)
